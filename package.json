@@ -1,0 +1,17 @@
+{
+  "name": "previews-worker",
+  "version": "1.0.0",
+  "description": "Scaffold a client repo's preview/ folder for Cloudflare Workers at client.<domain>.",
+  "type": "module",
+  "bin": {
+    "previews-worker": "bin/previews-worker.mjs"
+  },
+  "files": [
+    "bin",
+    "templates"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
