@@ -15,7 +15,7 @@ const toolingFiles = ['wrangler.jsonc', '.assetsignore', '_headers', 'robots.txt
 const contentFiles = ['index.html', '404.html'];
 const exportIgnoreRule = '/preview export-ignore';
 
-const usage = 'usage: pnpm dlx github:JacobBlana/previews-worker#v1 init <host> [--force]';
+const usage = 'usage: pnpm dlx github:JacobBlana/previews-worker init <host> [--force]';
 
 function fail(message) {
     console.error(message);

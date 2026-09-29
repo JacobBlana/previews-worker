@@ -7,7 +7,7 @@ Serves a client repo's `preview/` folder at `<client>.<your domain>` on Cloudfla
 From the client's repo:
 
 ```sh
-pnpm dlx github:JacobBlana/previews-worker#v1 init acme.example.dev
+pnpm dlx github:JacobBlana/previews-worker init acme.example.dev
 ```
 
 This creates `preview/` with a starter page, `noindex` headers, `robots.txt` and the Worker's `wrangler.jsonc`, and adds `/preview export-ignore` to `.gitattributes`. Existing files are kept. `--force` rewrites the tooling files (`wrangler.jsonc`, `.assetsignore`, `_headers`, `robots.txt`) but never your HTML.
@@ -27,8 +27,4 @@ The domain's zone must be in the same Cloudflare account. The Cloudflare GitHub 
 
 ## Updating
 
-`init` copies the templates into the client repo, so changes here reach a client when you re-run `init <host> --force` there. Move the `v1` tag after changing the templates:
-
-```sh
-git tag -f v1 && git push -f origin v1
-```
+`init` installs from `main` and copies the templates into the client repo, so changes here reach a client when you re-run `init <host> --force` there.
